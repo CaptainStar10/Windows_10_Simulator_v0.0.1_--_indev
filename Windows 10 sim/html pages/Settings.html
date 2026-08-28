@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow: hidden;
+            background: linear-gradient(45deg, rgb(194, 194, 194), rgb(226, 226, 226), white);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .Container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+        .LeftPanel{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(180deg, rgb(226, 226, 226), white);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .RightPanel{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .LeftPanel .Account{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+        .LeftPanel .Account .Text{
+            width: 50%;
+            height: 100%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-weight: bold;
+            display: block;
+            text-align: end;
+            align-content: center;
+        }
+        .LeftPanel .Account .Profile{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Profile img{
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        @media all and (max-width: 1920){
+            .Profile img{
+                width: 120px;
+                height: 120px;
+            }
+            .Profile .Account .Text{
+                font-size: 2rem;
+            }
+            .LeftPanel{
+                width: 20%;
+            }
+        }
+
+        @media all and (max-width: 900px){
+            .Profile img{
+                width: 50px;
+                height: 50px;
+            }
+            .Profile .Account .Text{
+                font-size: 0.5rem;
+            }
+        }
+
+        .Options{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow-x: hidden;
+        }
+        .Options, ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .Link{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: rgb(226, 226, 226);
+        }
+        .Link:hover{
+            background-color: rgb(209, 209, 209);
+        }
+    </style>
+
+    <div class="Container">
+        <div class="LeftPanel">
+            <div class="Account">
+                <div class="Text">
+                    name:______
+                    account:_____
+                </div>
+                <div class="Profile" id="Profile" title="Change profile">
+                    <img src="../assets/pictures/icons/NoProfile.png" alt="No_profile" id="Profile">
+                </div>
+            </div>
+            <div class="Options">
+                <ul id="List">
+                    <li class="Link">Home</li>
+                    <li class="Link">System</li>
+                    <li class="Link">Bluetooth & devices</li>
+                    <li class="Link">Network & internet</li>
+                    <li class="Link">Personalization</li>
+                    <li class="Link">Apps</li>
+                    <li class="Link">Accounts</li>
+                    <li class="Link">Time & language</li>
+                    <li class="Link">Gaming</li>
+                    <li class="Link">Accesibility</li>
+                    <li class="Link">Privacy & security</li>
+                    <li class="Link">Windows Update</li>
+                </ul>
+            </div>
+        </div>
+        <div class="RightPanel"></div>
+    </div>
+
+    <script>
+        import WindowPrompt_Active from "../window.js";
+
+        let a = WindowPrompt_Active(false);
+
+        const Profile = document.getElementById("Profile");
+        Profile.addEventListener("mouseover", function(){
+            Profile.style.transition = "0.15s";
+            Profile.style.transform = "scale(110%)";
+        });
+        Profile.addEventListener("mouseout", function(){
+            Profile.style.transition = "0.15s";
+            Profile.style.transform = "scale(100%)";
+        });
+        Profile.addEventListener("click", function(){
+            if(a === true) {a = false;} else {a = true;}
+            console.log(a);
+        });
+    </script>
+</body>
+</html>
