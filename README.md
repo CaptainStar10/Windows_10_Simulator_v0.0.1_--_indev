@@ -14,3 +14,6 @@ The project is 2k lines of code for rendering icons, desktop, taskbar, the start
    The start button brings up the start menu. The second one opens settings which uses iframes to render the application. The settings application file is located int the 'html pages/Settings.html'.
 
 *ENJOY* and be patient. This project might take a while to finish =).
+
+*NOTE*:
+The wallpaper used for the desktop and the start button icon are *NOT* made by me, but found out randomly on the internet :P. 
