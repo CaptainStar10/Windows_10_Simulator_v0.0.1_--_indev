@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.Desktop{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.Taskbar{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    bottom: -55px;
+    z-index: 10;
+}
+
+@keyframes Up{
+    to{
+        bottom: 0;
+    }
+}
+
+.Taskbar #Elements{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 70%;
+}
+#Elements li{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Elements .StartBtn{
+    width: 70%;
+    height: 70%;
+    cursor: pointer;
+    background-image: url("../assets/pictures/icons/start.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    border-radius: 5px;
+}
+.StartMenu{
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    display: none;
+    animation: GoUp 0.2s linear;
+    z-index: 10;
+}
+
+@keyframes GoUp{
+    from{
+        bottom: -600px;
+    }
+}
+
+.StartMenu .LeftPanel, .StartMenu .RightPanel{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.StartMenu .LeftPanel .TileList{
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+}
+.StartMenu .LeftPanel .TileList .Icon{
+    width: 40px;
+    height: 50px;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+.StartMenu .LeftPanel .TileList:hover{
+    background-color: rgb(223, 222, 222);
+}
+.StartMenu .LeftPanel .TileList .LabelBtn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+}
+.StartMenu .LeftPanel .CategoryLetter{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: blue;
+}
+.StartMenu .LeftPanel ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: red;
+    width: 100%;
+}
+.StartMenu .LeftPanel ul li{
+    width: auto;
+    height: 50px;
+    display: block;
+    flex-direction: column;
+}
+
+.Taskbar .TimeAndDate{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Taskbar .TimeAndDate .Calendar{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.Calendar:hover{
+    background-color: whitesmoke;
+}
+.Taskbar .TimeAndDate .Widgets{
+    left: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.Widgets:hover{
+    background-color: whitesmoke;
+}
+.Taskbar .TimeAndDate .Time{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    left: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.FrameBuffer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}

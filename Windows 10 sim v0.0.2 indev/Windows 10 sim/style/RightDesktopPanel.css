@@ -1,0 +1,26 @@
+.CalendarPanel{
+    width: 20%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+.WidgetsPanel{
+    width: 40%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+@keyframes GoLeft{
+    from{
+        right: -25%;
+    }
+}

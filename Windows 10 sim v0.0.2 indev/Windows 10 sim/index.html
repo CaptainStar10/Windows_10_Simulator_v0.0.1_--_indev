@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10 | SIMULATOR</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/window.css">
+    <link rel="stylesheet" href="style/icon.css">
+    <link rel="stylesheet" href="style/RightDesktopPanel.css">
+</head>
+<body>
+    <div id="StartMenu">
+        <div class="LeftPanel">
+            <div class="TileList" onclick="CreateWindow('Settings', 'Settings.html', 'assets/pictures/icons/Settings.png')">
+                <div class="Icon" style="background-image: url('assets/pictures/icons/Settings.png');"></div>
+                <div class="LabelBtn">Settings</div>
+            </div>
+        </div>
+        <div class="RightPanel"></div>
+    </div>
+
+    <div class="CalendarPanel" id="CP"></div>
+    <div class="WidgetsPanel" id="WD"></div>
+
+    <div class="Desktop" id="Desktop">
+        <div class="Taskbar" id="Taskbar">
+            <ul id="Elements">
+                <li>
+                    <div id="Start" title="Start"></div>
+                </li>
+            </ul>
+            <div class="TimeAndDate">
+                <div class="Widgets" id="Wdgs" title="Widgets" style="background-image: url('assets/pictures/icons/widgets.png');"></div>
+                <div class="Time">
+                    <div>
+                        <strong id="Day"></strong>
+                        <i>/</i>
+                        <strong id="Month"></strong>
+                        <i>/</i>
+                        <strong id="Year"></strong><br>
+                    </div>
+                    <div style="flex-direction: row;">
+                        <sub id="hour"></sub>
+                        <sub>:</sub>
+                        <sub id="minutes"></sub>
+                        <sub id="AMPM">AM</sub>
+                    </div>
+                </div>
+                <div class="Calendar" id="Cln" title="Calendar" style="background-image: url('assets/pictures/icons/calendar.png');"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="functions/RightDesktopPanel.js"></script>
+    <script src="functions/time.js"></script>
+    <script src="functions/main.js"></script>
+    <script src="functions/window.js"></script>
+</body>
+</html>
