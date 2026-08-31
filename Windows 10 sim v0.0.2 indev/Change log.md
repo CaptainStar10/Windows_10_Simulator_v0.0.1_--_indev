@@ -1,7 +1,7 @@
 # Windows_10_Simulator_v0.0.2_--_indev
 *Windows 10 like simulator in your browser(v0.0.2 indev)*
 
-Finally, a new update for the *Windows 10-like* OS. The update v.0.0.2(launched on 31/08/2026) recreate how the taskbar, the settings app interact with the OS and much more. With this update we are making every version of *Windows 10-like* OS in a folder with the name and its version.
+Finally, a new update for the *Windows 10-like* OS. The update v.0.0.2 indev(launched on 31/08/2026) recreate how the taskbar, the settings app interact with the OS and much more. With this update we are making every version of *Windows 10-like* OS in a folder with the name and its version.
 
 1. Major updates:
     1. Time and date: Added time and date to the bottom right section of the taskbar. Right now, while testing, it shows the time and date from Romania, but it might work with other timezones.
